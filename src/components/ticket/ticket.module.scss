@@ -1,0 +1,63 @@
+@import '../../global-variable.scss';
+
+.ticket{
+    background-color: $backgroungd-color-item;
+    border-radius: 5px;
+    padding: 15px 20px;
+    &__header{
+        font-size: 24px;
+    color: $blue-item;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    }
+    &__info{
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    }
+    &__text{
+        color: $span-text-color;
+    line-height: 18px;
+    text-transform: uppercase;
+    }
+}
+@media (max-width: 383px) {
+    .ticket{
+        &__text{
+font-size: 10px;
+        }
+        &__text-info{
+font-size: 10px;
+        }
+        &__header-logo{
+            width: 100px;
+        }
+        &__header{
+            font-size: 20px;
+        }
+        &__info{
+            gap: 8px;
+        }
+    }
+}
+@media (max-width: 355px) {
+    .ticket{
+        &__text{
+font-size: 9px;
+        }
+        &__text-info{
+font-size: 9px;
+        }
+        &__header-logo{
+            width: 80px;
+        }
+        &__header{
+            font-size: 18px;
+        }
+        &__info{
+            gap: 0px;
+        }
+    }
+}

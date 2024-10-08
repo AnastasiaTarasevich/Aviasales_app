@@ -1,0 +1,70 @@
+@import '../../global-variable.scss';
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    background-color: $backgroungd-color-item;
+    border-radius: 5px;
+    max-width: 232px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    box-shadow: 0 3px 15px -5px $span-text-color;
+    max-height: 252px;
+    margin-bottom: 20px;
+    &__title{
+        margin: 20px 20px 10px;
+        text-transform: uppercase;
+    }
+    &__label{
+        padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 400;
+    }
+    &__input{
+        position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    }
+    &__input-custom{
+        display: flex;
+    }
+    &__input-custom::before{
+        content: '';
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: 1px solid $border-color;
+        background-size: 12px 8px;
+    border-radius: 3px;
+    height: 20px;
+    width: 20px;
+    background-color: $backgroungd-color-item;
+    display: flex;
+    margin-right: 10px;
+    }
+    &__input:checked + &__input-custom::before{
+        background-position: center;
+        background-image: url(./Shape.svg);
+        border: 1px solid $blue-item;
+    }
+    &__label:hover{
+        background-color: $hover-item;
+    }
+}
+@media (max-width: 700px) {
+    .side-bar {
+max-width: 100%;
+margin-right: 0px;
+&__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+}}
+@media (max-width: 368px) {
+    .side-bar {
+&__label{
+    padding: 5px 20px;
+    font-size: 10px;
+}
+}}

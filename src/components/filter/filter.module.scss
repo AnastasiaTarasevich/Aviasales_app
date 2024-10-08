@@ -1,0 +1,60 @@
+@import '../../global-variable.scss';
+.filter{
+    &__list{
+        display: grid;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    justify-items: stretch;
+    text-transform: uppercase;
+    gap: 0;
+    }
+    &__list-item{
+        display: flex;
+    background-color: $backgroungd-color-item;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $border-filter-color;
+    border-right: none;
+    }
+    &__list-item:last-child{
+        border-right: 1px solid $border-filter-color;
+        border-radius: 0 5px 5px 0;
+    }
+    &__list-item:first-child{
+        border-radius: 5px 0 0 5px;
+    }
+    &__list-item:hover,
+    &__list-item:focus,
+    &__list-item:active {
+        background-color: $blue-item; 
+        color: white; 
+    }
+
+    &__list-button {
+        border: none; 
+        background: none;
+        color: inherit; 
+        cursor: pointer;
+        text-transform: uppercase; 
+        font-weight: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    height: 100%; 
+    width: 100%;
+    }
+    &__sort{
+        background-color: $blue-item; 
+        color: white; 
+    }
+    
+}
+@media (max-width: 415px) {
+    .filter{
+        &__list-item{
+            font-size: 9px;
+    letter-spacing: -0.5px;
+        }
+    }
+}

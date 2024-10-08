@@ -1,0 +1,12 @@
+.ticket-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.alert{
+    font-weight: 400;
+}
+.spin{
+    display: flex;
+    justify-content: center;
+}
